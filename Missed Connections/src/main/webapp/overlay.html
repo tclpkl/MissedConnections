@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>MissedSC | Submit Page</title>
+	<script src="https://kit.fontawesome.com/51b017a2ee.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="css/overlay.css">
+</head>
+<body>
+	<!-- need to be sure overlay only shows up if person is already logged in with Google  -->
+	<!-- BEGINNING OF OVERLAY DIV --> 
+	<div id="submit_post" class="overlay">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fa-solid fa-x fa-2x" style="color: #D56262; float: right; margin: 20px"></i></a>
+		<div class="overlay-content">
+			<div class="new_post_header">
+				<h1>New Post</h1>
+			</div>
+			<form action="Server" method="GET">
+				<div class="submit_post_row">
+					<textarea id="post_comment" placeholder="Write" name="post_comment" required></textarea>
+				</div>
+				<div class="submit_post_row">
+					<input type="text" id="hashtag_submit_post" name="hashtag" placeholder="#CSCI201 #SAL">
+				</div>
+				<div class="submit_post_row">
+					<button type="submit" id="submit_post_button"  style="text-align:right">Submit</button>
+					<input type="reset"><i class="fa fa-trash" aria-hidden="true"></i>
+				</div>
+			</form>
+		</div>
+	</div>
+	<!-- END OF OVERLAY DIV --> 
+	
+	
+	
+	<h2>Overlay</h2>
+
+	<!-- This is the exact line of code to change/modify in the left sidebar code. --> 
+	 <div class="submitPost" onclick="openNav()">Submit Post</div>
+	<!-- ADD THIS IN OTHER FILES, ENSURES OVERLAY POPS UP WITH CLICK --> 
+	<script>
+		function openNav() {
+		  document.getElementById("submit_post").style.width = "100%";
+		}
+
+		function closeNav() {
+		  document.getElementById("submit_post").style.width = "0%";
+		}
+	</script>
+	<!-- END --> 
+
+</body>
+</html>
